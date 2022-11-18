@@ -7,7 +7,18 @@ class classs extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-       
+        bottomNavigationBar: BottomNavigationBar(items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+              backgroundColor: Color.fromARGB(255, 5, 28, 47)),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.pie_chart), label: 'Transfers'),
+          BottomNavigationBarItem(icon: Icon(Icons.sync_alt), label: 'Push'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.notifications), label: 'Notifications'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Contacts')
+        ]),
         body: ListView(
           children: [
             Container(
@@ -57,13 +68,13 @@ class classs extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 5, 40, 68),
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(40),
-                  bottomRight: Radius.circular(40),
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
                 ),
               ),
             ),
             SizedBox(
-              height: 200,
+              height: 250,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: 10,
@@ -145,6 +156,36 @@ class classs extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            SizedBox(
+              height: 250,
+              child: ListView.builder(
+                itemCount: 20,
+                itemBuilder: (context, index) => Column(
+                  children: [
+                    ListTile(
+                      title: Text('Bazar Donde Sonia'),
+                      subtitle: Text('Jul 24 - 09:17 AM'),
+                      trailing: Text('-\$ 11.99'),
+                    ),
+                    ListTile(
+                      title: Text('Pizzeria La Shushi'),
+                      subtitle: Text('Jul 24 - 08:00 AM'),
+                      trailing: Text('-\$ 22.10'),
+                    ),
+                    ListTile(
+                      title: Text('Agultas de Jamaica'),
+                      subtitle: Text('Jul 22 - 04:00 AM'),
+                      trailing: Text('-\$ 7.00'),
+                    ),
+                    ListTile(
+                      title: Text('Apple'),
+                      subtitle: Text('Jul 22 - 04:00 AM'),
+                      trailing: Text('-\$ 22.10'),
+                    ),
+                  ],
+                ),
+              ),
             )
           ],
         ),
