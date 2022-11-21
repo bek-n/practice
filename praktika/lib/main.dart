@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 
 
 
-import '17 November/pr.dart';
+
+import '21 November/praktika.dart';
 
 
 
 void main() {
-  runApp(const classs());
+  runApp(const prpr());
 }
