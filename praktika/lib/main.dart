@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 
 
 
-import '21 November/praktika.dart';
+
+import '22 November/salat.dart';
 
 
 
 void main() {
-  runApp(const prpr());
+  runApp(const salat());
 }
